@@ -6,7 +6,7 @@
 /*   By: lihrig <lihrig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 13:52:33 by lihrig            #+#    #+#             */
-/*   Updated: 2026/02/06 14:19:22 by lihrig           ###   ########.fr       */
+/*   Updated: 2026/02/06 14:37:21 by lihrig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,8 @@ Zombie::Zombie(std::string name) : name(name)
 Zombie::~Zombie(void)
 {
     std::cout << name << " zerstoerrt" << std::endl;
+}
+void Zombie::announcement(void)
+{
+    std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
