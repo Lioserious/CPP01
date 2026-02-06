@@ -4,7 +4,8 @@
 #include <string>
 #include <iostream>
 
-class Zombie {
+class Zombie
+{
 private:
     std::string name;
 
@@ -19,6 +20,5 @@ public:
 	~Zombie();
 	void announcement(void);
 };
-
 Zombie* zombieHorde(int N, std::string name);
 #endif
