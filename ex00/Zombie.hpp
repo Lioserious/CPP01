@@ -13,6 +13,7 @@ class Zombie
 		Zombie(std::string name);
 		//Deconstructor
 		~Zombie();
+		//Bekanntmachung Zombie: BRAAIN
 		void announcement(void);
 };
 
