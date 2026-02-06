@@ -6,7 +6,7 @@
 /*   By: lihrig <lihrig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 13:59:48 by lihrig            #+#    #+#             */
-/*   Updated: 2026/02/06 15:05:21 by lihrig           ###   ########.fr       */
+/*   Updated: 2026/02/06 15:05:44 by lihrig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void randomChump(std::string name)
 {
     Zombie zombie(name);
-    zombie.announce();
+    zombie.announcement();
 }
