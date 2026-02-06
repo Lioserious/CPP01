@@ -6,7 +6,7 @@
 /*   By: lihrig <lihrig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 13:59:45 by lihrig            #+#    #+#             */
-/*   Updated: 2026/02/06 14:49:46 by lihrig           ###   ########.fr       */
+/*   Updated: 2026/02/06 14:52:50 by lihrig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,9 @@
 */
 Zombie* newZombie(std::string name)
 {
-    Zombie* zombie = new Zombie(name);
-    return zombie;
+	Zombie* zombie = new Zombie(name);
+	if(!zombie)
+		return NULL;
+	return zombie;
 }
 
