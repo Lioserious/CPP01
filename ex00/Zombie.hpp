@@ -15,8 +15,8 @@ class Zombie
 		~Zombie();
 		//Bekanntmachung Zombie: BRAAIN
 		void announcement(void);
-		
 		std::string getName(void) const;
 };
 
+Zombie* newZombie(std::string name);
 #endif
