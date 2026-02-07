@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lihrig <lihrig@student.42.fr>              +#+  +:+       +#+         #
+#    By: ileon <ileon@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/05 10:36:24 by lihrig            #+#    #+#              #
-#    Updated: 2026/02/06 16:16:29 by lihrig           ###   ########.fr        #
+#    Updated: 2026/02/07 10:55:33 by ileon            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@
 # ============================================================================ #
 
 # Name des finalen Programms
-NAME        = zombie
+NAME        = violance
 
 # Compiler und Flags
 CXX         = c++
@@ -23,6 +23,9 @@ CXXFLAGS    = -Wall -Wextra -Werror -std=c++98
 
 # Source-Dateien
 SRCS        = main.cpp \
+			HumanA.cpp \
+			HumanB.cpp \
+			Weapon.cpp \
 
 # Objekt-Dateien Ordner
 OBJS_DIR    = objects
@@ -87,7 +90,7 @@ all: header $(NAME)
 # Header-Banner beim Start
 header:
 	@echo "$(CYAN)╔════════════════════════════════════════════════════════════╗$(RESET)"
-	@echo "$(CYAN)║$(YELLOW)$(BOLD)                    COMPILING PHONEBOOK                    $(CYAN)║$(RESET)"
+	@echo "$(CYAN)║$(YELLOW)$(BOLD)                    COMPILING VIOLENCE                    $(CYAN)║$(RESET)"
 	@echo "$(CYAN)╚════════════════════════════════════════════════════════════╝$(RESET)"
 	@echo ""
 
