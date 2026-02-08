@@ -6,7 +6,7 @@
 #    By: lihrig <lihrig@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/05 10:36:24 by lihrig            #+#    #+#              #
-#    Updated: 2026/02/08 10:27:32 by lihrig           ###   ########.fr        #
+#    Updated: 2026/02/08 10:28:26 by lihrig           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,9 +23,7 @@ CXXFLAGS    = -Wall -Wextra -Werror -std=c++98
 
 # Source-Dateien
 SRCS        = main.cpp \
-			HumanA.cpp \
-			HumanB.cpp \
-			Weapon.cpp \
+			Harl.cpp \
 
 # Objekt-Dateien Ordner
 OBJS_DIR    = objects
