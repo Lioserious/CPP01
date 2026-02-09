@@ -7,18 +7,18 @@
 class Zombie
 {
 private:
-    std::string name;
+    std::string _name;
 
 public:
 	//Constructor
-	Zombie(std::string name);
+	Zombie(std::string _name);
 	// Constructor für Arrays!
 	Zombie();
 	// Setter für Name
-	void setName(std::string name);
+	void setName(std::string _name);
 
 	~Zombie();
 	void announcement(void);
 };
-Zombie* zombieHorde(int N, std::string name);
+Zombie* zombieHorde(int N, std::string _name);
 #endif

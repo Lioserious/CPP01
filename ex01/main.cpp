@@ -6,7 +6,7 @@
 /*   By: lihrig <lihrig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 13:59:41 by lihrig            #+#    #+#             */
-/*   Updated: 2026/02/06 16:10:47 by lihrig           ###   ########.fr       */
+/*   Updated: 2026/02/09 14:30:02 by lihrig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int main()
 {
-    std::cout << "=== Test 1: Small Horde (3 Zombies) ===" << std::endl;
+    std::cout << "Test 1: Kleine Horde (3 Zombies)" << std::endl;
     int N = 3;
     Zombie* horde = zombieHorde(N, "HordeZombie");
     
@@ -26,17 +26,19 @@ int main()
     }
     // Clean up
     delete[] horde;
-    std::cout << "\n=== Test 2: Larger Horde (5 Zombies) ===" << std::endl;
+    std::cout << "\nTest 2: Grosse Horde (5 Zombies)" << std::endl;
     int M = 5;
+    // Returned Pointer zum ersten Zombie, welcher dann iteriert wirdS
     Zombie* bigHorde = zombieHorde(M, "BigHorde");
     for (int i = 0; i < M; i++)
     {
         bigHorde[i].announcement();
     }
     delete[] bigHorde;
-    std::cout << "\n=== Test 3: Single Zombie ===" << std::endl;
-    Zombie* one = zombieHorde(1, "Alone");
+    std::cout << "\nTest 3: Single Zombie" << std::endl;
+    Zombie* one = zombieHorde(1, "Single");
     one[0].announcement();
+    //deconstructor fuer Array
     delete[] one;
     
     return 0;
