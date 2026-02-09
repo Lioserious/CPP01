@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ileon <ileon@student.42.fr>                +#+  +:+       +#+         #
+#    By: lihrig <lihrig@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/05 10:36:24 by lihrig            #+#    #+#              #
-#    Updated: 2026/02/07 13:36:34 by ileon            ###   ########.fr        #
+#    Updated: 2026/02/09 15:39:20 by lihrig           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,25 @@ OBJS        = $(SRCS:.cpp=.o)
 
 # Vollständige Pfade für Objekt-Dateien
 OBJS_FULL   = $(addprefix $(OBJS_DIR)/, $(OBJS))
+
+# Test-Dateien
+TEST_FILE   = test.txt
+TEST_OUTPUT = test.txt.replace
+
+# ============================================================================ #
+#                                   Testfile                                      #
+# ============================================================================ #
+
+# Test-Datei erstellen
+test: $(TEST_FILE)
+
+# Erstellt test.txt mit Inhalt
+$(TEST_FILE):
+	@echo "$(BLUE)$(BOLD)📝 Creating test file...$(RESET)"
+	@echo "hello world 42" > $(TEST_FILE)
+	@echo "$(GREEN)✅ Test file created: $(MAGENTA)$(TEST_FILE)$(RESET)"
+	@echo ""
+
 
 # ============================================================================ #
 #                                   FARBEN                                      #
@@ -82,7 +101,7 @@ endef
 # ============================================================================ #
 
 # Default-Target: Kompiliert das Programm
-all: header $(NAME)
+all: header $(NAME) test
 
 # Header-Banner beim Start
 header:
@@ -124,6 +143,10 @@ fclean: clean
 	@rm -f $(NAME)
 	@echo "$(GREEN)✅ Executable removed!$(RESET)"
 	@echo ""
+	@echo "$(YELLOW)🗑️  Removing test files...$(RESET)"
+	@rm -f $(TEST_FILE) $(TEST_OUTPUT)
+	@echo "$(GREEN)✅ Test files removed: $(MAGENTA)$(TEST_FILE) $(TEST_OUTPUT)$(RESET)"
+	@echo ""
 
 # Re: Alles neu kompilieren
 re: fclean all
@@ -133,5 +156,5 @@ re: fclean all
 # ============================================================================ #
 
 # Phony-Targets (keine echten Dateien)
-.PHONY: all clean fclean re header
+.PHONY: all clean fclean re header test
 

@@ -6,13 +6,24 @@
 /*   By: lihrig <lihrig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 10:36:24 by lihrig            #+#    #+#             */
-/*   Updated: 2026/02/09 15:29:07 by lihrig           ###   ########.fr       */
+/*   Updated: 2026/02/09 15:32:04 by lihrig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <fstream>
 #include <string>
+
+/*
+** replaceLine - Ersetzt alle str1 durch str2 in einer Zeile
+**
+** Sucht str1 von links nach rechts. Für jedes Vorkommen:
+** - Kopiere alles davor
+** - Füge str2 statt str1 ein
+** - Suche nächstes ab Position nach s1
+**
+** Beispiel: replaceLine("hello hello", "hello", "hi") → "hi hi"
+*/
 
 std::string replaceLine(std::string line, std::string str1, std::string str2)
 {
