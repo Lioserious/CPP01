@@ -6,7 +6,7 @@
 /*   By: lihrig <lihrig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 16:34:10 by lihrig            #+#    #+#             */
-/*   Updated: 2026/02/06 16:49:04 by lihrig           ###   ########.fr       */
+/*   Updated: 2026/02/09 15:05:33 by lihrig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ HumanA::HumanA(std::string name, Weapon& weapon)
     
 }
 
-// Attack
+// Attacke
 void HumanA::attack()
 {
     std::cout << name << " attacks with their " 

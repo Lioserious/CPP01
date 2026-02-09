@@ -6,7 +6,7 @@
 /*   By: lihrig <lihrig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 16:34:16 by lihrig            #+#    #+#             */
-/*   Updated: 2026/02/06 16:50:07 by lihrig           ###   ########.fr       */
+/*   Updated: 2026/02/09 15:16:39 by lihrig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,15 @@ HumanB::HumanB(std::string name)
 // Setter
 void HumanB::setWeapon(Weapon& weapon)
 {
-    this->weapon = &weapon;  // Store address
+    // Speichert Adresse der Waffe
+    this->weapon = &weapon;  
 }
 
 // Attack
 void HumanB::attack()
 {
-    if (weapon)  // NULL check!
+    
+    if (weapon)
     {
         std::cout << name << " attacks with their " 
                   << weapon->getType() << std::endl;
