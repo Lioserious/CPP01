@@ -6,7 +6,7 @@
 /*   By: lihrig <lihrig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 16:16:10 by lihrig            #+#    #+#             */
-/*   Updated: 2026/02/06 16:17:51 by lihrig           ###   ########.fr       */
+/*   Updated: 2026/02/09 15:00:38 by lihrig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,9 @@ int main()
     std::string& stringREF = str;
     
     // Print memory addresses
-    std::cout << "Memory address of str:       " << &str << std::endl;
-    std::cout << "Memory address in stringPTR: " << stringPTR << std::endl;
-    std::cout << "Memory address of stringREF: " << &stringREF << std::endl;
-    
+    std::cout << "Memory addresse von str:       " << &str << std::endl;
+    std::cout << "Memory addresse  von stringPTR: " << stringPTR << std::endl;
+    std::cout << "Memory addresse fuer stringREF: " << &stringREF << std::endl;
     std::cout << std::endl;
     
     // Print values
