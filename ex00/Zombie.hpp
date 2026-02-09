@@ -7,10 +7,10 @@
 class Zombie
 {
 	private:
-		std::string name;
+		std::string _name;
 	public:
 		//Constructor
-		Zombie(std::string name);
+		Zombie(std::string _name);
 		//Deconstructor
 		~Zombie();
 		//Bekanntmachung Zombie: BRAAIN
@@ -18,6 +18,6 @@ class Zombie
 		std::string getName(void) const;
 };
 
-Zombie* newZombie(std::string name);
-void randomChump(std::string name);
+Zombie* newZombie(std::string _name);
+void randomChump(std::string _name);
 #endif

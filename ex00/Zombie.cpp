@@ -6,13 +6,13 @@
 /*   By: lihrig <lihrig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 13:52:33 by lihrig            #+#    #+#             */
-/*   Updated: 2026/02/06 14:40:37 by lihrig           ###   ########.fr       */
+/*   Updated: 2026/02/09 14:17:55 by lihrig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string name) : name(name)
+Zombie::Zombie(std::string name) : _name(name)
 {
     std::cout << name << " erstellt" << std::endl;
 }
@@ -20,10 +20,10 @@ Zombie::Zombie(std::string name) : name(name)
 //deconstructor
 Zombie::~Zombie(void)
 {
-    std::cout << name << " zerstoerrt" << std::endl;
+    std::cout << _name << " zerstoerrt" << std::endl;
 }
 
 void Zombie::announcement(void)
 {
-    std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+    std::cout << _name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: lihrig <lihrig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 13:59:45 by lihrig            #+#    #+#             */
-/*   Updated: 2026/02/06 14:52:50 by lihrig           ###   ########.fr       */
+/*   Updated: 2026/02/09 14:18:18 by lihrig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 3. Gibt die **Adresse** des neuen Zombies zurück
 4. Diese Adresse wird in `zombie` gespeichert
 */
-Zombie* newZombie(std::string name)
+Zombie* newZombie(std::string _name)
 {
-	Zombie* zombie = new Zombie(name);
+	Zombie* zombie = new Zombie(_name);
 	if(!zombie)
 		return NULL;
 	return zombie;
