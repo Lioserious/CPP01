@@ -6,7 +6,7 @@
 /*   By: lihrig <lihrig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 10:29:48 by lihrig            #+#    #+#             */
-/*   Updated: 2026/02/08 10:51:40 by lihrig           ###   ########.fr       */
+/*   Updated: 2026/02/09 15:42:19 by lihrig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,5 @@ void Harl::complain(std::string level)
             return;
         }
     }
-    std::cout << "Unknown level: " << level << std::endl;
+    std::cout << "Unbekannt: " << level << std::endl;
 }
