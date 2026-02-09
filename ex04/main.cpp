@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ileon <ileon@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lihrig <lihrig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 10:36:24 by lihrig            #+#    #+#             */
-/*   Updated: 2026/02/07 11:25:24 by ileon            ###   ########.fr       */
+/*   Updated: 2026/02/09 15:29:07 by lihrig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,27 @@
 #include <fstream>
 #include <string>
 
-std::string replaceLine(std::string line, std::string s1, std::string s2)
+std::string replaceLine(std::string line, std::string str1, std::string str2)
 {
     std::string result = "";
     size_t pos = 0;
     size_t found;
     
     // Edge Case: Leerer s1 würde Endlosschleife verursachen
-    if (s1.empty())
+    if (str1.empty())
         return line;
     
     // Solange s1 in der Zeile gefunden wird
-    while ((found = line.find(s1, pos)) != std::string::npos)
+    while ((found = line.find(str1, pos)) != std::string::npos)
     {
         // Alles VOR s1 zum Ergebnis hinzufügen
         result += line.substr(pos, found - pos);
         
         // s2 statt s1 hinzufügen
-        result += s2;
+        result += str2;
         
         // Position NACH s1 setzen
-        pos = found + s1.length();
+        pos = found + str1.length();
     }
     
     // Rest der Zeile hinzufügen
@@ -43,9 +43,18 @@ std::string replaceLine(std::string line, std::string s1, std::string s2)
     return result;
 }
 
+/*
+** PROGRAM: LIKE SED
+**
+** Liest eine Datei, ersetzt alle Vorkommen von str1 mit str2,
+** und schreibt das Ergebnis in <dateiname>.replace
+**
+** Usage: ./program <filename> <s1> <s2>
+*/
+
 int main(int argc, char **argv)
 {
-    // Parameter-Check
+    // Input Chechecker
     if (argc != 4)
     {
         std::cerr << "Usage: " << argv[0] << " <filename> <s1> <s2>" << std::endl;
@@ -53,8 +62,8 @@ int main(int argc, char **argv)
     }
     
     std::string filename = argv[1];
-    std::string s1 = argv[2];
-    std::string s2 = argv[3];
+    std::string str1 = argv[2];
+    std::string str2 = argv[3];
     
     // Input-File öffnen
     std::ifstream infile(filename.c_str());
@@ -78,7 +87,7 @@ int main(int argc, char **argv)
     std::string line;
     while (std::getline(infile, line))
     {
-        std::string newline = replaceLine(line, s1, s2);
+        std::string newline = replaceLine(line, str1, str2);
         outfile << newline << std::endl;
     }
     
